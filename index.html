@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Note Application - Prototype client web CRUD yang mengonsumsi Public REST API JSONPlaceholder, dibuat untuk tugas Pemrograman Client-Server D3 TI Kelompok 1.">
+<title>Note Application - Kelompok 1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="title">Note <span>Application</span></div>
+  <div class="meta">D3 TI - E Application - Kelompok 1</div>
+</header>
+
+<main>
+  <section class="panel form-panel">
+    <form id="postForm">
+      <input id="titleInput" type="text" placeholder="Judul catatan&hellip;" required maxlength="120">
+      <textarea id="bodyInput" placeholder="Tulis catatanmu di sini&hellip;" required maxlength="500"></textarea>
+      <div class="btn-row">
+        <button type="submit" class="btn-primary" id="submitBtn">Simpan Catatan</button>
+        <button type="button" class="btn-ghost" id="cancelBtn" style="display:none;">Batal</button>
+      </div>
+      <div class="form-msg" id="formMsg" role="status" aria-live="polite"></div>
+    </form>
+  </section>
+
+  <section class="list-panel">
+    <div class="toolbar">
+      <span id="countText"><span class="status-dot" id="statusDot"></span><span id="statusText">menghubungkan ke API&hellip;</span></span>
+      <button class="btn-ghost btn-icon" id="refreshBtn" aria-label="Muat ulang" title="Muat ulang">&#8635;</button>
+    </div>
+    <div class="notes-list" id="grid">
+      <div class="note-skeleton"></div>
+      <div class="note-skeleton"></div>
+      <div class="note-skeleton"></div>
+      <div class="note-skeleton"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>D3 TI &middot; Pemrograman Client-Server &middot; Kelompok 1</p>
+  <p class="members">Rima Nazwa &middot; Ruth Angelia Sihombing &middot; Adithya Fahreza &middot; Jelita Crisna Zalukhu</p>
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
